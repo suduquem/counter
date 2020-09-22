@@ -1,0 +1,14 @@
+<h2>This is the Counter</h2>
+<!-- La condición es que se renderice solo si está -->
+<!-- *ngIf es una directiva -->
+<p *ngIf="counterParent">{{ counterParent }}</p>
+<!-- Cuando no exista se muestra el valor de Empty -->
+<p *ngIf="!counterParent">Empty</p>
+
+<h2>These are the Counter changes</h2>
+<h3>Current Value, Previous Value</h3>
+<ul *ngFor="let item of changesHistory">
+  {{
+    item
+  }}
+</ul>
